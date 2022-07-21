@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Starbucks Korea</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Keen-Slider -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/keen-slider@6.7.0/keen-slider.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <!-- Font Awesome -->
+    <script defer src="https://kit.fontawesome.com/e19b8c717e.js" crossorigin="anonymous"></script>
+    <!-- Keen-Slider -->
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.7.0/keen-slider.min.js"></script>
+    <script defer src="./js/main.js" type="module"></script>
+  </head>
+  <body>
+    <header class="header">
+      <!-- Start: /.ly-inner header__inner -->
+      <div class="ly-inner header__inner">
+        <a class="logo header__logo" href="#">
+          <img class="logo__img header__logo-img" src="./imgs/logo.png" alt="스타벅스 로고" title="스타벅스" />
+        </a>
+        <nav class="header__navi">
+          <div class="unb header__unb unb-mobile" data-media="tabletX" role="navigation">
+            <a class="unb__icon header__unb-icon icon-user" href="./login.html"></a>
+            <a class="unb__icon header__unb-icon icon-location" href="./map.html"></a>
+            <a
+              class="unb__icon header__unb-icon _margin-right_0 icon-bars"
+              id="openBtn"
+              href="javascript:void(0);"
+              role="button"
+            ></a>
+          </div>
+          <div class="unb header__unb unb-pc" data-media="desktop" role="navigation">
+            <a class="unb__link header__unb-link" href="#">Sign In</a>
+            <a class="unb__link header__unb-link" href="#">My Starbucks</a>
+            <a class="unb__link header__unb-link" href="#">Customer Service & Ideas</a>
+            <a class="unb__link header__unb-link" href="#">Find a Store</a>
+            <a class="unb__search header__unb-search">
+              <input class="unb__search-input header__unb-search-input" type="text" placeholder=" 통합검색" />
+              <button class="unb__search-icon header__unb-search-icon icon-magnifying-glass" id="search"></button>
+            </a>
+          </div>
+          <div class="sidebar header__sidebar" id="sidebar">
+            <div class="ly-inner sidebar__inner">
+              <button class="sidebar__icon icon-xmark" id="closeBtn"></button>
+              <a class="sidebar__search" href="javascript:void(0);">
+                <input class="sidebar__search-input" type="text" />
+                <button class="sidebar__search-btn">Search</button>
+              </a>
+              <ul class="gnb header__gnb" role="navigation">
+                <li class="gnb__item header__gnb-item" data-media="tabletX">
+                  <a class="gnb__link header__gnb-link header__gnb-link_bgc_gray icon-angle-down collapse-tab" role="button">
+                    <span class="gnb__link-cont header__gnb-link-cont">My Starbucks</span>
+                  </a>
+                  <div class="lnb-wrapper header__lnb-wrapper">
+                    <ul class="lnb header__lnb ly-inner">
+                      <li class="lnb__item header__lnb-item" data-media="tabletX">
+                        <a class="lnb__link header__lnb-link" href="#">한눈에 보기</a>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">My 리워드</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">리워드 및 혜택</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">별 히스토리</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">My 스타벅스 카드</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">보유 카드</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">카드 등록</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">카드 충전</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">분실신고/잔액이전</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">My 스타벅스 e-Gift Card</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">선물하기</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">선물 내역</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">장바구니 내역</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">My 쿠폰</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">등록하기</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">선물하기</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">사용하기</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link" a href="#">My 캘린더</a>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link" a href="#">My 메뉴</a>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">My e-프리퀀시</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">이용안내</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">이용현황</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link" href="#">My 고객의 소리</a>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link" href="#">전자 영수증</a>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link" href="#">개인컵 리워드 설정</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="gnb__item header__gnb-item">
+                  <a class="gnb__link header__gnb-link icon-angle-down collapse-tab" role="button">
+                    <span class="gnb__link-cont header__gnb-link-cont">COFFEE</span>
+                  </a>
+                  <div class="lnb-wrapper header__lnb-wrapper">
+                    <ul class="lnb header__lnb ly-inner">
+                      <li class="lnb__item header__lnb-item" data-media="tabletX">
+                        <a class="lnb__link header__lnb-link" href="#">한눈에 보기</a>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">커피</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">스타벅스 원두</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">스타벅스 비아</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">스타벅스앳홈 by 캡슐</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link" href="#">나와 어울리는 커피</a>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">
+                            스타벅스 리저브
+                            <sup class="header__sup_font-size_xx-small">TM</sup>
+                          </span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">ABOUT</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">RESERVE MAGAZINE</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">에스프레소 음료</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">도피오</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">에스프레소 마키아또</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">아메리카노</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">마키아또</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">카푸치노</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">라떼</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">모카</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">최상의 커피를 즐기는 법</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">커피 프레스</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">푸어 오버</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">아이스 푸어 오버</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">커피 메이커</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">리저브를 매장에서 다양하게 즐기는 법</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">커피 이야기</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">농장에서 우리의 손으로</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">최상의 아라비카 원두</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">스타벅스 로스트 스펙트럼</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">스타벅스 디카페인</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">클로버® 커피 추출 시스템</a>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="fnb header__fnb">
+                      <div class="fnb__inner header__fnb-inner ly-inner">
+                        <h4 class="fnb__ttl header__fnb-ttl">
+                          <a class="fnb__link header__fnb-link" href="#">나와 어울리는 커피 찾기</a>
+                        </h4>
+                        <p class="fnb__txt header__fnb-txt">스타벅스가 여러분에게 어울리는 커피를 찾아드립니다.</p>
+                        <h4 class="fnb__ttl header__fnb-ttl">
+                          <a class="fnb__link header__fnb-link" href="#">최상의 커피를 즐기는 법</a>
+                        </h4>
+                        <p class="fnb__txt header__fnb-txt">여러가지 방법을 통해 다양한 풍미의 커피를 즐겨보세요</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="gnb__item header__gnb-item">
+                  <a class="gnb__link header__gnb-link icon-angle-down collapse-tab" role="button">
+                    <span class="gnb__link-cont header__gnb-link-cont">MENU</span>
+                  </a>
+                  <div class="lnb-wrapper header__lnb-wrapper">
+                    <ul class="lnb header__lnb ly-inner">
+                      <li class="lnb__item header__lnb-item" data-media="tabletX">
+                        <a class="lnb__link header__lnb-link" href="#">한눈에 보기</a>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">음료</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">전체보기</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">콜드 브루</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">브루드 커피</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">에스프레소</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">프라푸치노</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">블렌디드</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">스타벅스 피지오</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">티(티바나)</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">기타 제조 음료</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">스타벅스 주스(병음료)</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">푸드</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">전체보기</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">브레드</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">케이크</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">샌드위치 & 샐러드</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">따뜻한 푸드</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">과일 & 요거트</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">스낵 & 미니 디저트</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">아이스크림</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">상품</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">전체보기</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">머그</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">글라스</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">플라스틱 텀블러</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">스테인리스 텀블러</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">보온병</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">액세서리</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">선물세트</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">커피 용품</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">패키지 티(티바나)</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">카드</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">전체보기</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">실물카드</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">e-Gift 카드</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">메뉴 이야기</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">나이트로 콜드브루</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">콜드 브루</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">스타벅스 티바나</a>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="fnb header__fnb">
+                      <div class="fnb__inner header__fnb-inner ly-inner">
+                        <h4 class="fnb__ttl header__fnb-ttl">
+                          <a class="fnb__link header__fnb-link" href="#">나이트로 콜드 브루</a>
+                          <span class="fnb__link-btn header__fnb-link-btn">NEW</span>
+                        </h4>
+                        <p class="fnb__txt header__fnb-txt">
+                          나이트로 커피 정통의 물결치듯 흘러내리는 캐스케이딩과 부드러운 크림을
+                          경험하세요.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="gnb__item header__gnb-item">
+                  <a class="gnb__link header__gnb-link icon-angle-down collapse-tab" role="button">
+                    <span class="gnb__link-cont header__gnb-link-cont">STORE</span>
+                  </a>
+                  <div class="lnb-wrapper header__lnb-wrapper">
+                    <ul class="lnb header__lnb ly-inner">
+                      <li class="lnb__item header__lnb-item" data-media="tabletX">
+                        <a class="lnb__link header__lnb-link" href="#">한눈에 보기</a>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">매장 찾기</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">빠른 검색</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">지역 검색</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link" href="#">드라이브 스루 매장</a>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link" href="#">
+                          <span class="lnb__link-cont header__lnb-link-cont">
+                            스타벅스 리저브
+                            <sup class="header__sup_font-size_xx-small">TM</sup>
+                            매장
+                          </span>
+                        </a>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link" href="#">커뮤니티 스토어 매장</a>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">매장 이야기</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">티바나 바 매장</a>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="fnb header__fnb">
+                      <div class="fnb__inner header__fnb-inner ly-inner">
+                        <h4 class="fnb__ttl header__fnb-ttl">
+                          <a class="fnb__link header__fnb-link" href="#">매장찾기</a>
+                        </h4>
+                        <p class="fnb__txt header__fnb-txt">보다 빠르게 매장을 찾아보세요.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="gnb__item header__gnb-item">
+                  <a class="gnb__link header__gnb-link icon-angle-down collapse-tab" role="button">
+                    <span class="gnb__link-cont header__gnb-link-cont">RESPONSIBILITY</span>
+                  </a>
+                  <div class="lnb-wrapper header__lnb-wrapper">
+                    <ul class="lnb header__lnb ly-inner">
+                      <li class="lnb__item header__lnb-item" data-media="tabletX">
+                        <a class="lnb__link header__lnb-link" href="#">한눈에 보기</a>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link" href="#">사회공헌 캠페인 소개</a>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">지역 사회 참여 활동</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">희망배달 캠페인</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">재능기부 카페 소식</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">커뮤니티 스토어</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">청년 지원 프로그램</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">우리 농산물 사랑 캠페인</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">우리 문화 지키기</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">환경보호 활동</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">친환경 활동</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">일회용 컵 없는 매장</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">피 원두 재활용</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">윤리 구매</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">윤리적 원두 구매</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">공정무역 인증</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">커피 농가 지원 활동</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">글로벌 사회 공헌</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">윤리경영 보고서</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">스타벅스 재단</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">지구촌 봉사의 달</a>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="fnb header__fnb">
+                      <div class="fnb__inner header__fnb-inner ly-inner">
+                        <h4 class="fnb__ttl header__fnb-ttl">
+                          <a class="fnb__link header__fnb-link" href="#">스타벅스 카드 등록하기</a>
+                        </h4>
+                        <p class="fnb__txt header__fnb-txt">카드 등록 후 리워드 서비스를 누리고 사용내역도 조회해보세요.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="gnb__item header__gnb-item">
+                  <a class="gnb__link header__gnb-link icon-angle-down collapse-tab" role="button">
+                    <span class="gnb__link-cont header__gnb-link-cont">Starbucks Rewards</span>
+                  </a>
+                  <div class="lnb-wrapper header__lnb-wrapper">
+                    <ul class="lnb header__lnb ly-inner">
+                      <li class="lnb__item header__lnb-item" data-media="tabletX">
+                        <a class="lnb__link header__lnb-link" href="#">한눈에 보기</a>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">스타벅스 리워드</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">스타벅스 리워드 소개</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">등급 및 혜택</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">스타벅스 별</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">자주 하는 질문</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">스타벅스 카드</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">스타벅스 카드 소개</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">스타벅스 카드 갤러리</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">등록 및 조회</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">충전 및 이용안내</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">분실신고/환불신청</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">자주 하는 질문</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">스타벅스 e-gift Card</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">스타벅스 e-Gift Card 소개</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">이용안내</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">선물하기</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">자주 하는 질문</a>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="fnb header__fnb">
+                      <div class="fnb__inner header__fnb-inner ly-inner">
+                        <h4 class="fnb__ttl header__fnb-ttl">
+                          <a class="fnb__link header__fnb-link" href="#"></a>
+                        </h4>
+                        <p class="fnb__txt header__fnb-txt"></p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="gnb__item header__gnb-item">
+                  <a class="gnb__link header__gnb-link icon-angle-down collapse-tab" role="button">
+                    <span class="gnb__link-cont header__gnb-link-cont">SWHAT'S NEW</span>
+                  </a>
+                  <div class="lnb-wrapper header__lnb-wrapper">
+                    <ul class="lnb header__lnb ly-inner">
+                      <li class="lnb__item header__lnb-item" data-media="tabletX">
+                        <a class="lnb__link header__lnb-link" href="#">한눈에 보기</a>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">이벤트</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">전체</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">스타벅스 카드</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">스타벅스 리워드</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">온라인</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">e-프리퀀시 증정품</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link icon-angle-down collapse-tab" role="button">
+                          <span class="lnb__link-cont header__lnb-link-cont">매장별 이벤트</span>
+                        </a>
+                        <div class="sub-lnb header__sub-lnb" role="navigation">
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">일반 매장</a>
+                          <a class="sub-lnb__link header__sub-lnb-link" href="#">신규 매장</a>
+                        </div>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link" href="#">공지사항</a>
+                      </li>
+                      <li class="lnb__item header__lnb-item">
+                        <a class="lnb__link header__lnb-link" href="#">월페이퍼</a>
+                      </li>
+                    </ul>
+                    <div class="fnb header__fnb">
+                      <div class="fnb__inner header__fnb-inner ly-inner">
+                        <h4 class="fnb__ttl header__fnb-ttl">
+                          <a class="fnb__link header__fnb-link" href="#">매장별 이벤트</a>
+                        </h4>
+                        <p class="fnb__txt header__fnb-txt">스타벅스의 매장 이벤트 정보를 확인 하실 수 있습니다.</p>
+                        <h4 class="fnb__ttl header__fnb-ttl">
+                          <a class="fnb__link header__fnb-link" href="#">월페이퍼</a>
+                        </h4>
+                        <p class="fnb__txt header__fnb-txt">
+                          매월 업데이트되는 월페이퍼(PC/Mobile)로 스타벅스를 더욱 가깝게 즐겨보세요!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- End: /.ly-inner header__inner -->
+    </header>
+    <main class="main-banner">
+      <div class="main__inner ly-inner" id="mainBanner">
+        <img class="main__item main__img1 _hidden" src="./imgs/m_2022_Summer1_main_slogun.png" alt="" data-media="mobile"/>
+        <img class="main__item main__img2 _hidden" src="./imgs/m_2022_Summer1_main_punchgraffiti.png" alt="" data-media="mobile"/>
+        <img class="main__item main__img3 _hidden" src="./imgs/m_2022_Summer1_main_rollinmint.png" alt="" data-media="mobile"/>
+        <img class="main__item main__img4 _hidden" src="./imgs/m_2022_Summer1_main_pomeloflow.png" alt="" data-media="mobile"/>
+        <img class="main__item main__img1 _hidden" src="./imgs/2022_Summer1_main_slogun.png" alt="" data-media="tabletY"/>
+        <img class="main__item main__img2 _hidden" src="./imgs/2022_Summer1_main_punchgraffiti.png" alt="" data-media="tabletY"/>
+        <img class="main__item main__img3 _hidden" src="./imgs/2022_Summer1_main_rollinmint.png" alt="" data-media="tabletY"/>
+        <img class="main__item main__img4 _hidden" src="./imgs/2022_Summer1_main_pomeloflow.png" alt="" data-media="tabletY"/>
+        <a class="main__item main__btn _hidden" href="#" role="button">자세히 보기</a>
+      </div>
+    </main>
+    <aside class="notice">
+      <div class="notice-bar ly-inner">
+        <div class="notice-bar__left">
+          <a class="notice__btn">공지사항</a>
+          <div class="keen-slider notice__slider" id="noticeKeenSlider"></div>
+        </div>
+        <button class="notice-bar__right icon-angle-down" id="angleBtn">스타벅스 프로모션</button>
+      </div>
+      <div class="promotion _hidden" id="promotion">
+        <div class="keen-slider promotion__slider" id="promotionKeenSlider">
+          <div class="keen-slider__slide number-slide1 promotion__keen-slider">
+            <a class="promotion__img promotion__img1" href="javascript:void(0);"></a>
+            <a class="link-btn" href="#" role="button">자세히 보기</a>
+          </div>
+          <div class="keen-slider__slide number-slide2 promotion__keen-slider">
+            <a class="promotion__img promotion__img2" href="javascript:void(0);"</a>
+            <a class="link-btn" href="#" role="button">자세히 보기</a>
+          </div>
+          <div class="keen-slider__slide number-slide3 promotion__keen-slider">
+            <a class="promotion__img promotion__img3" href="javascript:void(0);"></a>
+            <a class="link-btn" href="#" role="button">자세히 보기</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <section class="membership">
+      <div class="member__inner ly-inner">
+        <img class="member__logo" src="./imgs/rewards-logo.png" alt="" />
+        <div>
+          <div class="member__copy-wrapper member__copy-wrapper1">
+            <div class="copy member__copy">
+              <h3 class="copy__ttl_h3">
+                <span class="copy__ttl-cont"><b>스타벅스만의 특별한 혜택,</b></span>
+                <span class="copy__ttl-cont"><b>스타벅스 리워드</b></span>
+              </h3>
+              <h4 class="copy__ttl_h4">
+                <span class="copy__ttl-cont"><b>스타벅스 회원이세요?</b></span>
+                <span class="copy__ttl-cont">로그인을 통해 나만의 리워드를 확인해보세요.</span>
+              </h4>
+              <h4 class="copy__ttl_h4">
+                <span class="copy__ttl-cont"><b>스타벅스 회원이 아니세요?</b></span>
+                <span class="copy__ttl-cont">가입을 통해 리워드 혜택을 즐기세요.</span>
+              </h4>
+            </div>
+            <div class="member__btn">
+              <a class="section__link-btn member__btn-signup" href="#" role="button">회원가입</a>
+              <a class="section__link-btn" href="#" role="button">로그인</a>
+            </div>
+          </div>
+          <hr class="member__hr" />
+          <div class="member__copy-wrapper member__copy-wrapper2">
+            <div class="copy member__copy">
+              <p class="copy__txt">
+                <span class="copy__txt-cont">회원 가입 후, 스타벅스 e-Gift Card를</span>
+                <span class="copy__txt-cont"><b>"나에게 선물하기"로 구매하시고,</b></span>
+                <span class="copy__txt-cont"><b>편리하게 등록하세요!</b></span>
+              </p>
+              <p class="copy__txt">
+                <span class="copy__txt-cont">카드를 등록하여 스타벅스 리워드 회원이 되신 후,</span>
+                <span class="copy__txt-cont">첫 구매를 하시면 무료 음료쿠폰을 드립니다!</span>
+              </p>
+            </div>
+            <a class="section__link-btn member__btn member__gift-btn" href="#" role="button">e-Gift Card 선물하기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bean-banner" id="beanBanner">
+      <div class="bean__inner ly-inner">
+        <div class="bean__img">
+          <img class="_hidden" src="./imgs/m_2022_Summer1_bean_bean.png" alt="" data-media="tabletX" />
+          <img class="_hidden" src="./imgs/2022_Summer1_bean_bean.png" alt="" data-media="desktop" />
+        </div>
+        <div class="copy bean__copy">
+          <h4 class="copy__ttl_h4 bean__copy-ttl_h4 _hidden">여름의 시작을 함께할</h4>
+          <h3 class="copy__ttl_h3 bean__copy-ttl_h3 _hidden">술라웨시 토라자 250g</h3>
+          <p class="copy__txt bean__copy-txt _hidden">
+            <span class="copy__txt-cont bean__copy-txt-cont">블랙 세서미의 고소한 풍미와 마쉬멜로의 꿀맛이</span>
+            <span class="copy__txt-cont bean__copy-txt-cont">조화로운 시즌 한정 원두를 만나보세요.</span>
+          </p>
+          <a class="section__link-btn bean__btn _hidden" href="#" role="button">자세히 보기</a>
+        </div>
+      </div>
+    </section>
+    <section class="reserve-banner">
+      <div class="reserve__inner ly-inner">
+        <a class="section__link-btn reserve__btn" href="#" role="button">자세히 보기</a>
+      </div>
+    </section>
+    <section class="product-banner" id="productBanner">
+      <div class="product__inner ly-inner">
+        <div class="product__img">
+          <img src="./imgs/2022_Summer1_pick_img.png" alt="" />
+        </div>
+        <div class="copy product__copy">
+          <h3 class="copy__ttl_h3 product__copy-ttl_h3 _hidden">
+            <span class="copy__ttl-cont product__copy-ttl-cont">
+              <b>다양한 메뉴</b>
+              를
+            </span>
+            <span class="copy__ttl-cont product__copy-ttl-cont">
+              <b>스타벅스</b>
+              에서 즐겨보세요.
+            </span>
+          </h3>
+          <p class="copy__txt product__copy-txt _hidden">
+            <span class="copy__txt-cont product__copy-txt-cont">스타벅스만의 특별함을 경험할 수 있는 최상의 선택 음료</span>
+            <span class="copy__txt-cont product__copy-txt-cont">스타벅스 커피와 완벽한 어울림을 자랑하는 푸드</span>
+            <span class="copy__txt-cont product__copy-txt-cont">다양한 시도와 디자인으로 가치를 더하는 상품</span>
+            <span class="copy__txt-cont product__copy-txt-cont">소중한 사람에게 마음을 전하는 가장 좋은 방법</span>
+            <span class="copy__txt-cont product__copy-txt-cont"><b>스타벅스 카드</b></span>
+          </p>
+          <a class="section__link-btn product__btn _hidden" href="#" role="button">자세히 보기</a>
+        </div>
+      </div>
+    </section>
+    <section class="reserve-magazine">
+      <div class="magazine__inner ly-inner">
+        <a class="section__link-btn magazine__btn" href="#" role="button">자세히 보기</a>
+      </div>
+    </section>
+    <section class="store-info" id="storeInfo">
+      <div class="store__inner ly-inner">
+        <div class="store__img">
+          <img class="store__img1" src="./imgs/store_exp_img01.png" alt="">
+          <img class="store__img2" src="./imgs/store_exp_img02.png" alt="">
+          <img class="store__img3" src="./imgs/store_exp_img03.png" alt="">
+        </div>
+        <div class="copy store__copy">
+          <h3 class="copy__ttl_h3 store__copy-ttl_h3 _hidden">
+            <span class="copy__ttl-cont store__copy-ttl-cont">스타벅스를</span>
+            <span class="copy__ttl-cont store__copy-ttl-cont">
+              <b>가까이에서 경험</b>
+              해보세요.
+            </span>
+          </h3>
+          <h4 class="copy__ttl_h4 store__copy-ttl_h4 _hidden">고객님과 가장 가까이 있는 매장을 찾아보세요!</h4>
+          <p class="copy__txt store__copy-txt _hidden">
+            <span class="copy__txt-cont store__copy-txt-cont">
+              차별화된 커피 경험을 누릴 수 있는
+              <b>
+                리저브
+                <sup>TM</sup>
+                매장
+              </b>
+            </span>
+            <span class="copy__txt-cont store__copy-txt-cont">
+              다양한 방법으로 편리하게 즐길 수 있는
+              <b>드라이브 스루 매장</b>
+            </span>
+            <span class="copy__txt-cont store__copy-txt-cont">
+              함께해서 더 따뜻할수 있는 지역사회 소통 공간
+              <b>커뮤니티 매장</b>
+            </span>
+          </p>
+          <a class="section__link-btn store__btn _hidden" href="#" role="button">매장 찾기</a>
+        </div>
+        <div class="store__img store__img_flex_1">
+          <img class="store__img4" src="./imgs/store_exp_img04.png" alt="">
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <!-- Start: /.ly-inner footer__inner -->
+      <div class="ly-inner footer__inner">
+        <ul class="gnb footer__gnb" id="footerCollapse" role="navigation">
+          <li class="gnb__item footer__gnb-item">
+            <a class="gnb__link footer__gnb-link icon-angle-down collapse-tab" role="button">
+              <span class="gnb__link-cont footer__gnb-link-cont">CUSTOMER SERVICE & IDEAS</span>
+            </a>
+            <ul class="lnb footer__lnb ly-inner">
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link" href="#">자주 하는 질문</a>
+              </li>
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link" href="#">고객의 소리</a>
+              </li>
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link icon-angle-down collapse-tab" role="button">
+                  <span class="lnb__link-cont footer__lnb-link-cont">스타벅스 이용 팁</span>
+                </a>
+                <div class="sub-lnb footer__sub-lnb" role="navigation">
+                  <a class="sub-lnb__link footer__sub-lnb-link" href="#">홈페이지 이용 팁</a>
+                  <a class="sub-lnb__link footer__sub-lnb-link" href="#">애플리케이션 이용 팁</a>
+                  <a class="sub-lnb__link footer__sub-lnb-link" href="#">제휴카드 안내</a>
+                </div>
+              </li>
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link" href="#">고객 경험 설문조사</a>
+              </li>
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link" href="#">비회원 전자영수증 조회</a>
+              </li>
+            </ul>
+          </li>
+          <li class="gnb__item footer__gnb-item">
+            <a class="gnb__link footer__gnb-link icon-angle-down collapse-tab" role="button">
+              <span class="gnb__link-cont footer__gnb-link-cont">COMPANY</span>
+            </a>
+            <ul class="lnb footer__lnb ly-inner">
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link" href="#">한눈에 보기</a>
+              </li>
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link" href="#">스타벅스 사명</a>
+              </li>
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link icon-angle-down collapse-tab" role="button">
+                  <span class="lnb__link-cont footer__lnb-link-cont">스타벅스 소개</span>
+                </a>
+                <div class="sub-lnb footer__sub-lnb" role="navigation">
+                  <a class="sub-lnb__link footer__sub-lnb-link" href="#">스타벅스 코리아</a>
+                  <a class="sub-lnb__link footer__sub-lnb-link" href="#">주요 연혁</a>
+                  <a class="sub-lnb__link footer__sub-lnb-link" href="#">스타벅스 이야기</a>
+                </div>
+              </li>
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link" href="#">국내 뉴스룸</a>
+              </li>
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link" href="#">세계의 스타벅스</a>
+              </li>
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link" href="#">글로벌 뉴스룸</a>
+              </li>
+            </ul>
+          </li>
+          <li class="gnb__item footer__gnb-item">
+            <a class="gnb__link footer__gnb-link icon-angle-down collapse-tab" role="button">
+              <span class="gnb__link-cont footer__gnb-link-cont">CORPORATE SALES</span>
+            </a>
+            <ul class="lnb footer__lnb ly-inner">
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link" href="#">단체 및 기업 구매 안내</a>
+              </li>
+            </ul>
+          </li>
+          <li class="gnb__item footer__gnb-item">
+            <a class="gnb__link footer__gnb-link icon-angle-down collapse-tab" role="button">
+              <span class="gnb__link-cont footer__gnb-link-cont">PARTNERSHIP</span>
+            </a>
+            <ul class="lnb footer__lnb ly-inner">
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link" href="#">신규 입점 제의</a>
+              </li>
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link" href="#">협력 고객사 등록신청</a>
+              </li>
+            </ul>
+          </li>
+          <li class="gnb__item footer__gnb-item">
+            <a class="gnb__link footer__gnb-link icon-angle-down collapse-tab" role="button">
+              <span class="gnb__link-cont footer__gnb-link-cont">ONLINE COMMUNITY</span>
+            </a>
+            <ul class="lnb footer__lnb ly-inner">
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link" href="#">페이스북</a>
+              </li>
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link" href="#">트위터</a>
+              </li>
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link" href="#">유튜브</a>
+              </li>
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link" href="#">인스타그램</a>
+              </li>
+            </ul>
+          </li>
+          <li class="gnb__item footer__gnb-item">
+            <a class="gnb__link footer__gnb-link icon-angle-down collapse-tab" role="button">
+              <span class="gnb__link-cont footer__gnb-link-cont">RECRUIT</span>
+            </a>
+            <ul class="lnb footer__lnb ly-inner">
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link" href="#">채용 소개</a>
+              </li>
+              <li class="lnb__item footer__lnb-item">
+                <a class="lnb__link footer__lnb-link" href="#">채용 지원하기</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="footer__btn-set footer__unb">
+          <a class="footer__btn-link" href="#" role="button">HOME</a>
+          <a class="footer__btn-link" href="#" role="button">Sign In</a>
+          <a class="footer__btn-link" href="#" role="button">Join Us</a>
+        </div>
+        <div class="footer__award">
+          <div class="keen-slider footer__award-slider ly-inner" id="awardKeenSlider"></div>
+        </div>
+        <div class="footer__agreement">
+          <a class="footer__agree-link" href="#">개인정보처리방침</a>
+          <a class="footer__agree-link" href="#">영상정보처리기기 방침</a>
+          <a class="footer__agree-link" href="#">홈페이지 이용약관</a>
+          <a class="footer__agree-link" href="#">위치정보 이용약관</a>
+          <a class="footer__agree-link" href="#">스타벅스 카드 이용약관</a>
+          <a class="footer__agree-link" href="#">비회원 이용약관</a>
+          <a class="footer__agree-link" href="#">My DT Pass 서비스 이용약관</a>
+          <a class="footer__agree-link" href="#">윤리경영 핫라인</a>
+        </div>
+        <div class="footer__btn-set">
+          <a class="footer__btn-link" href="#" role="button">찾아오시는 길</a>
+          <a class="footer__btn-link" href="#" role="button">신규입점제의</a>
+          <a class="footer__btn-link" href="#" role="button">사이트 맵</a>
+        </div>
+        <ul class="footer__business">
+          <li class="footer__biz-item">사업자등록번호:201-81-21515</li>
+          <li class="footer__biz-item">주식회사 에스씨케이컴퍼니 대표이사:송 데이비드 호섭</li>
+          <li class="footer__biz-item">TEL:1522-3232</li>
+          <li class="footer__biz-item">개인정보 책임자:하익성</li>
+        </ul>
+        <small class="footer__copyright">ⓒ 2022 Starbucks Coffee Company. All Rights Reserved.</small>
+        <img class="footer-logo" src="./imgs/footer_logo.png" alt="" />
+      </div>
+      <!-- End: /.ly-inner footer__inner -->
+    </footer>
+    <div class="pop-up">
+      <a class="pop-up__link" href="#">
+        <img class="pop-up__img" src="./imgs/Mn0ecH_20220711153001636.png" alt="">
+      </a>
+      <a class="pop-up__link" href="#">
+        <img class="pop-up__img" src="./imgs/Mn0ecH_20220711153123340.png" alt="">
+      </a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+@mixin mobile {
+  @media #{$mobile} {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media #{$tablet} {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media #{$desktop} {
+    @content;
+  }
+}
+
+@mixin center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin centerX-absolute {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin centerY-absolute {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin center-margin {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin center-height($height) {
+  height: $height;
+  line-height: $height;
+}
+
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin sr-only {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(0,0,0,0);
+}
+
+@mixin height-hidden {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+}
+
+@mixin height-visible {
+  height: fit-content;
+  opacity: 1;
+}
+
+@mixin img {
+  width: 100%;
+  height: auto;
+}
+
+@mixin responsive-bgimg($padding) {
+  width: 100%;
+  height: 0;
+  padding-top: $padding;
+  background: {
+    repeat: no-repeat;
+    size: cover;
+    position: center;
+  }
+
+  @content;
+  //add background-image: url();
+}
+
+@mixin icon {
+  position: relative;
+  // removed font- based rules
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin icon-solid($unicode) {
+  @include icon;
+  // using style CSS custom property
+  font: var(--fa-font-solid);
+  content: '#{$unicode}';
+}
+
+@mixin icon-brands($unicode) {
+  @include icon;
+  // using style CSS custom property
+  font: var(--fa-font-brands);
+  content: '#{$unicode}';
+}
+
+@mixin round-corner($color: transparent, $width: 1px, $radius: 5rem) {
+  display: inline-block;
+  width: fit-content;
+  border: {
+    width: $width;
+    style: solid;
+    color: $color;
+    radius: $radius;
+  }
+  line-height: 1;
+  text-align: center;
+
+  @content;
+}

@@ -1,0 +1,121 @@
+.icon-user::before {
+  @include icon-solid('\f007');
+}
+.icon-location::before {
+  @include icon-solid('\f3c5');
+}
+.icon-bars::before {
+  @include icon-solid('\f0c9');
+}
+.icon-angle-down::after {
+  @include icon-solid('\f107');
+}
+.icon-angle-up::after {
+  @include icon-solid('\f106');
+}
+.icon-angle-left::after {
+  @include icon-solid('\f104');
+}
+.icon-angle-right::after {
+  @include icon-solid('\f105');
+}
+.icon-xmark::before {
+  @include icon-solid('\f00d');
+}
+.icon-volume::before {
+  @include icon-solid('\f028');
+}
+.icon-plus::after {
+  @include icon-solid('\2b');
+}
+.icon-chevron-left::before {
+  @include icon-solid('\f053');
+}
+.icon-chevron-right::before {
+  @include icon-solid('\f054');
+}
+.icon-play::before {
+  @include icon-solid('\f04b');
+}
+.icon-pause::before {
+  @include icon-solid('\f04c');
+}
+.icon-magnifying-glass::after {
+  @include icon-solid('\f002');
+}
+
+._margin-right_0 {
+  margin-right: 0 !important;
+}
+
+html {
+  font-size: $rootfont-size;
+  font-family: $basefont-sans;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: $small;
+}
+
+*[data-media='mobile'] {
+  @include mobile {
+    display: block;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+*[data-media='tabletX'] {
+  @include mobile {
+    display: block;
+  }
+  @include tablet {
+    display: block;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+*[data-media='tabletY'] {
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
+    display: block;
+  }
+  @include desktop {
+    display: block;
+  }
+}
+
+*[data-media='desktop'] {
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: block;
+  }
+}
+
+.ly-inner {
+  @include desktop {
+    max-width: 1600px;
+    @include center-margin;
+    padding: 10px 20px;
+    overflow: hidden;
+  }
+}

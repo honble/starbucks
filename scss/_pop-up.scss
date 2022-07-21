@@ -1,0 +1,20 @@
+.pop-up {
+  position: fixed;
+  top: 20vh;
+  right: 0;
+  @include center-flex;
+  flex-direction: column;
+
+  @include tablet {
+    right: 1vw;
+  }
+
+  @include desktop {
+    right: 3vw;
+  }
+}
+
+.pop-up__img {
+  @include img;
+  filter: drop-shadow(1px 1px 1px #222026);
+}

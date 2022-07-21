@@ -1,0 +1,38 @@
+//font 
+$rootfont-size: 6.25%; 
+$basefont-sans: 'Noto Sans KR', sans-serif;
+$basefont-serif: 'Noto Serif KR', serif;
+
+//font-size
+$xx-small: 10rem;
+$x-small: 12rem;  //h6
+$small: 14rem;    //h5
+$medium: 16rem;   //h4
+$large: 18rem;    //h3
+$x-large: 24rem;  //h2
+$xx-large: 32rem; //h1
+
+//media query
+$mobile: "screen and (max-width:767px)";
+$tablet: "screen and (min-width:768px) and (max-width:1023px)";
+$desktop: "screen and (min-width:1024px)";
+
+$height_70p: 70px;
+$height_25p: 25px;
+
+//aside.notice
+$icon-size: 20rem;
+
+//section.copy
+$bean__copy-tablet_top: 30%;
+$bean__copy-desktop_top: 20%;
+
+$product__copy-mobile_top: 0%;
+// $product__copy-tablet_top: 0%;
+$product__copy-desktop_top: 0%;
+
+$store__copy-tablet_top: 30%;
+$store__copy-desktop_top: 0%;
+
+
+

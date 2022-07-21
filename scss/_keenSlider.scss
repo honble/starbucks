@@ -1,0 +1,117 @@
+.navigation {
+  $arrow-size: 20rem;
+  $pageIcon-mh: 5rem;
+  $pageIcon-bdw: 3rem;
+
+  position: relative;
+  width: 100%;
+
+  .keen-slider__slide {
+    @include center-flex;
+  }
+  
+  .arrow {
+    @include round-corner(#1e3932, 2px, 50%) {
+      width: $arrow-size;
+      height: $arrow-size;
+      padding: $arrow-size;
+      font-size: $x-large;
+      color: #1e3932;
+    };
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .arrow--left {
+    left: $arrow-size;
+  
+    &::after {
+      @include icon-solid('\f104');
+      @include center-absolute;
+    }
+  }
+  .arrow--right {
+    right: $arrow-size;
+  
+    &::after {
+      @include icon-solid('\f105');
+      @include center-absolute;
+    }
+  }
+  .arrow--disabled.arrow--left,
+  .arrow--disabled.arrow--right {
+    color: #036635;
+    border-color: #036635;
+  }
+  .arrow--left,
+  .arrow--right,
+  .arrow--disabled.arrow--left,
+  .arrow--disabled.arrow--right {
+    display: none;
+
+    @include desktop {
+      display: block
+    }
+  }
+  
+  .pagination {
+    @include center-flex;
+  }
+  .toggle-btn {
+    @include desktop {
+      font-size: $large;
+    }
+  
+    &::before {
+      position: relative;
+      // removed font- based rules
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      margin: 0 $pageIcon-mh;
+      color: #036635;
+      cursor: pointer;
+      // using style CSS custom property
+      font: var(--fa-font-solid);
+      content: '\f04c';
+    }
+  
+    &.stop::before {
+      content: '\f04b';
+    }
+  }
+  .dots {
+    @include center-flex;
+    padding: 10rem 0;
+  }
+  .dot {
+    border: solid $pageIcon-bdw transparent;
+    width: $x-small;
+    height: $x-small;
+    background: #c5c5c5;
+    border-radius: 50%;
+    margin: 0 $pageIcon-mh;
+    // padding: 5px;
+    cursor: pointer;
+  
+    @include desktop {
+      width: $medium;
+      height: $medium;
+    }
+  
+    &:focus {
+      outline: none;
+    }
+  }
+  .dot--active {
+    border: solid $pageIcon-bdw #036635;
+    background-color: transparent;
+  
+    @include desktop {
+      border: solid 3rem #036635;
+    }
+  }  
+}
+
